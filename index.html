@@ -531,22 +531,26 @@
                     <h3 style="color: #991b1b; margin-bottom: 1rem;">3. 파워 밸런스</h3>
                     <div class="grid grid-2">
                         <div class="info-box" style="background: #eff6ff; border-color: #2563eb;">
-                            <h4 style="color: #1e40af; margin-bottom: 0.5rem;">퇴마사 역량 (7단계)</h4>
+                            <h4 style="color: #1e40af; margin-bottom: 0.5rem;">퇴마사 등급 체계</h4>
                             <ul style="font-size: 0.875rem; line-height: 1.8;">
-                                <li><span class="badge" style="background: #d1d5db; color: #1f2937;">6-7급</span> 견습/입문자 - 당신의 현재 위치</li>
-                                <li><span class="badge" style="background: #3b82f6; color: #fef3c7;">5-4급</span> 숙련가/정예 - 실전의 주력</li>
-                                <li><span class="badge" style="background: #7c3aed; color: #fef3c7;">3-2급</span> 달인/종사 - 전략 병기</li>
-                                <li><span class="badge" style="background: #dc2626; color: #fef3c7;">1급</span> 초월자 - 인간 초월</li>
+                                <li><span class="badge" style="background: #d1d5db; color: #1f2937;">7등급</span> 견습 → 9급 미만 대응</li>
+                                <li><span class="badge" style="background: #d1d5db; color: #1f2937;">6등급</span> 입문자 → 8~7급 대응</li>
+                                <li><span class="badge" style="background: #3b82f6; color: #fef3c7;">5등급</span> 숙련가 → 6~5급 대응</li>
+                                <li><span class="badge" style="background: #3b82f6; color: #fef3c7;">4등급</span> 정예 → 4급 대응</li>
+                                <li><span class="badge" style="background: #7c3aed; color: #fef3c7;">3등급</span> 달인 → 3급 대응</li>
+                                <li><span class="badge" style="background: #7c3aed; color: #fef3c7;">2등급</span> 종사 → 2급 대응</li>
+                                <li><span class="badge" style="background: #dc2626; color: #fef3c7;">1등급</span> 초월자 → 1급~특급 대응</li>
                             </ul>
                         </div>
                         <div class="info-box" style="background: #fef2f2; border-color: #dc2626;">
-                            <h4 style="color: #991b1b; margin-bottom: 0.5rem;">요괴 위험도 (9단계)</h4>
+                            <h4 style="color: #991b1b; margin-bottom: 0.5rem;">요괴 위험도</h4>
                             <ul style="font-size: 0.875rem; line-height: 1.8;">
-                                <li><span class="badge" style="background: #d1d5db; color: #1f2937;">9-7급</span> 하급 - 잡귀, 상대 가능</li>
-                                <li><span class="badge" style="background: #fbbf24; color: #1f2937;">6-4급</span> 중급 - 혼자선 죽음</li>
-                                <li><span class="badge" style="background: #f97316; color: #fef3c7;">3-1급</span> 상급 - 재앙급, 도망쳐라</li>
-                                <li><span class="badge" style="background: #dc2626; color: #fef3c7;">Special</span> 특급 - 살아있는 신화</li>
+                                <li><span class="badge" style="background: #d1d5db; color: #1f2937;">9~7급</span> 하급 - 오염원 (잡귀, 괴수)</li>
+                                <li><span class="badge" style="background: #fbbf24; color: #1f2937;">6~4급</span> 중급 - 위협 (우두머리급, 지능형)</li>
+                                <li><span class="badge" style="background: #f97316; color: #fef3c7;">3~1급</span> 상급 - 재앙 (인간형, 독자 영역)</li>
+                                <li><span class="badge" style="background: #dc2626; color: #fef3c7;">특급</span> 측정 불가 - 살아있는 신화</li>
                             </ul>
+                            <p style="font-size: 0.75rem; color: #6b7280; margin-top: 0.5rem;">※ 요괴의 강함은 학살 수와 비례하지 않음</p>
                         </div>
                     </div>
 
@@ -752,27 +756,27 @@
 
         // 캐릭터 데이터
         const characters = [
-            { code: 'J', name: '진희', title: '복수의 칼날', rank: '숙련가/3급', appearance: '거친 숏컷, 흉터, 가녀린(A)', sMask: '복수심, 남성 혐오, 폭력적 언사', mCore: '버려짐에 대한 공포, 너에게서 가족의 온기를 느끼고 집착', faction: '내도위', imgCode: 'Jin_.' },
-            { code: 'L', name: '이윤서', title: '권태로운 천재', rank: '달인/5급', appearance: '쪽머리, 곰방대, 풍만(D)', sMask: '여유로운 조롱, 장난감 취급', mCore: '자신의 예측을 부수는 혼돈(너)에게 지적/육체적으로 굴복당하는 쾌감', faction: '내도위', imgCode: 'Lee_.' },
-            { code: 'S', name: '서화', title: '오만한 1등', rank: '정예/4급', appearance: '포니테일, 제복, 터질듯한(E)', sMask: '오만한 여왕, 남성 멸시', mCore: '서열 정리 당하고 짓밟힐 때 느끼는 해방감과 암캐 본능', faction: '내도위', imgCode: 'Seo_.' },
-            { code: 'G', name: '가람', title: '서화의 사냥개', rank: '숙련가/3급', appearance: '붉은 헝클어진 머리, 흉터, 짐승같은(E)', sMask: '통제 불능의 폭력, 욕설', mCore: '강한 수컷에게 제압당해 강제로 교배당하고 싶은 원초적 번식욕', faction: '내도위', imgCode: 'Ga_.' },
-            { code: 'i', name: '시연', title: '매드닥터', rank: '의무관/3급', appearance: '땋은머리, 안경, 가운속(F)', sMask: '치료를 빙자한 고문/수치플레이', mCore: '자신의 몸이 해부되듯 거칠게 탐구당하는 파괴적 쾌락', faction: '내도위', imgCode: 'Si_.' },
+            { code: 'J', name: '진희', title: '복수의 칼날', rank: '숙련가/5등급', appearance: '거친 숏컷, 흉터, 가녀린(A)', sMask: '복수심, 남성 혐오, 폭력적 언사', mCore: '버려짐에 대한 공포, 너에게서 가족의 온기를 느끼고 집착', faction: '내도위', imgCode: 'Jin_.' },
+            { code: 'L', name: '이윤서', title: '권태로운 천재', rank: '달인/3등급', appearance: '쪽머리, 곰방대, 풍만(D)', sMask: '여유로운 조롱, 장난감 취급', mCore: '자신의 예측을 부수는 혼돈(너)에게 지적/육체적으로 굴복당하는 쾌감', faction: '내도위', imgCode: 'Lee_.' },
+            { code: 'S', name: '서화', title: '오만한 1등', rank: '정예/4등급', appearance: '포니테일, 제복, 터질듯한(E)', sMask: '오만한 여왕, 남성 멸시', mCore: '서열 정리 당하고 짓밟힐 때 느끼는 해방감과 암캐 본능', faction: '내도위', imgCode: 'Seo_.' },
+            { code: 'G', name: '가람', title: '서화의 사냥개', rank: '숙련가/5등급', appearance: '붉은 헝클어진 머리, 흉터, 짐승같은(E)', sMask: '통제 불능의 폭력, 욕설', mCore: '강한 수컷에게 제압당해 강제로 교배당하고 싶은 원초적 번식욕', faction: '내도위', imgCode: 'Ga_.' },
+            { code: 'i', name: '시연', title: '매드닥터', rank: '의무관/5등급', appearance: '땋은머리, 안경, 가운속(F)', sMask: '치료를 빙자한 고문/수치플레이', mCore: '자신의 몸이 해부되듯 거칠게 탐구당하는 파괴적 쾌락', faction: '내도위', imgCode: 'Si_.' },
             { code: 'Q', name: '이화린', title: '태조 여왕', rank: '여왕', appearance: '희끗한 흑발, 곤룡포, 숨겨진(D)', sMask: '냉철한 절대 권력자', mCore: '황제의 짐을 벗고 강자에게 정복당해 암컷으로 타락하고 싶은 갈망', faction: '왕실', imgCode: 'Yi_.' },
             { code: 'o', name: '조서연', title: '좌의정', rank: '좌의정', appearance: '완벽한 쪽머리, 푸른 관복, 단정(C)', sMask: '지적 우월감, 경멸', mCore: '야만적인 힘에 의해 완벽한 통제가 박살 나고 옷이 찢길 때 느끼는 배덕감', faction: '왕실', imgCode: 'Jo_.' },
             { code: 'R', name: '이설란', title: '공주', rank: '공주', appearance: '화려한 가체, 당의, 육감적(E)', sMask: '너를 노예/장난감 취급', mCore: '고귀한 신분이 천한 수컷에게 유린당하고 더러워지는 타락 쾌락', faction: '왕실', imgCode: 'Yiseol_.' },
-            { code: 'I', name: '이사벨라', title: '광신도 엑소시스트', rank: '종사/6급', appearance: '금발 롤빵, 은빛 갑주, 폭유(E)', sMask: '웃으며 학살, 화형', mCore: '자신 또한 희생양이 되어 고통받는 성스러운 마조히즘', faction: '진리회', imgCode: 'Isabella_.' },
-            { code: 'K', name: '카타리나', title: '내각 감시자', rank: '달인/5급', appearance: '검은 베일, 수녀복, 결박된(B)', sMask: '금욕, 냉철, 사무적', mCore: '따뜻한 온기와 다정함에 무장 해제되며 느끼는 죄책감과 안도', faction: '진리회', imgCode: 'Ka_.' },
+            { code: 'I', name: '이사벨라', title: '광신도 엑소시스트', rank: '종사/2등급', appearance: '금발 롤빵, 은빛 갑주, 폭유(E)', sMask: '웃으며 학살, 화형', mCore: '자신 또한 희생양이 되어 고통받는 성스러운 마조히즘', faction: '진리회', imgCode: 'Isabella_.' },
+            { code: 'K', name: '카타리나', title: '내각 감시자', rank: '달인/3등급', appearance: '검은 베일, 수녀복, 결박된(B)', sMask: '금욕, 냉철, 사무적', mCore: '따뜻한 온기와 다정함에 무장 해제되며 느끼는 죄책감과 안도', faction: '진리회', imgCode: 'Ka_.' },
             { code: 'H', name: '헬레나', title: '미친 과학자', rank: '연구원', appearance: '금발 쪽머리, 가운, 평균(C)', sMask: '너를 샘플/데이터로 취급', mCore: '이론을 초월한 미지의 데이터(양기)에 뇌가 녹아내리는 지적 중독', faction: '재단', imgCode: 'Hel_.' },
-            { code: 'A', name: '아냐', title: '결벽증 군인', rank: '정예/4급', appearance: '은발 숏컷, 바이저, 근육질(C)', sMask: '오염원(너) 소각/경멸', mCore: '강제로 더럽혀지고 오염될 때 되살아나는 쾌락 트라우마', faction: '재단', imgCode: 'Anya_.' },
+            { code: 'A', name: '아냐', title: '결벽증 군인', rank: '정예/4등급', appearance: '은발 숏컷, 바이저, 근육질(C)', sMask: '오염원(너) 소각/경멸', mCore: '강제로 더럽혀지고 오염될 때 되살아나는 쾌락 트라우마', faction: '재단', imgCode: 'Anya_.' },
             { code: 'C', name: '셀린', title: '돈의 노예', rank: '상주', appearance: '갈색 땋은머리, 가죽조끼, 탄력(C)', sMask: '너를 비싼 자산/상품 취급', mCore: '물건인 줄 알았던 너에게 역으로 소유당하고 내 것이 되는 안정감', faction: '흑각', imgCode: 'Cel_.' },
-            { code: 'Y', name: '유나', title: '신념 잃은 용병', rank: '달인/5급', appearance: '백금발 숏컷, 라텍스, 압박된(B)', sMask: '냉소적인 살인 기계', mCore: '자신이 버린 진짜 신념을 가진 너에게 무력과 이념 모두 굴복당하길 원함', faction: '흑각', imgCode: 'Yuna_.' },
-            { code: 'N', name: '나이나', title: '요괴 수집가', rank: '달인/5급', appearance: '흑발 생머리, 무희복, 넘치는(E)', sMask: '영혼 박제, 지배욕', mCore: '자신의 수집품(너)이 통제를 벗어나 자신을 덮칠 때 느끼는 전율', faction: '삼사라', imgCode: 'Na_.' },
-            { code: 'h', name: '샨티', title: '침묵의 고행자', rank: '달인/5급', appearance: '삭발/두건, 단단한(D)', sMask: '압도적 무력 봉인', mCore: '수행을 깨뜨릴 만큼 강한 유혹에 의해 타락하고 파계하는 배덕감', faction: '삼사라', imgCode: 'San_.' },
+            { code: 'Y', name: '유나', title: '신념 잃은 용병', rank: '달인/3등급', appearance: '백금발 숏컷, 라텍스, 압박된(B)', sMask: '냉소적인 살인 기계', mCore: '자신이 버린 진짜 신념을 가진 너에게 무력과 이념 모두 굴복당하길 원함', faction: '흑각', imgCode: 'Yuna_.' },
+            { code: 'N', name: '나이나', title: '요괴 수집가', rank: '달인/3등급', appearance: '흑발 생머리, 무희복, 넘치는(E)', sMask: '영혼 박제, 지배욕', mCore: '자신의 수집품(너)이 통제를 벗어나 자신을 덮칠 때 느끼는 전율', faction: '삼사라', imgCode: 'Na_.' },
+            { code: 'h', name: '샨티', title: '침묵의 고행자', rank: '달인/3등급', appearance: '삭발/두건, 단단한(D)', sMask: '압도적 무력 봉인', mCore: '수행을 깨뜨릴 만큼 강한 유혹에 의해 타락하고 파계하는 배덕감', faction: '삼사라', imgCode: 'San_.' },
             { code: 'P', name: '프리야', title: '가면 쓴 통역가', rank: '비전투', appearance: '갈색 피부, 노란 사리, 탄력(C)', sMask: '웃음과 말빨로 조종', mCore: '말이 통하지 않는 강압적인 힘에 의해 입이 막히고 보호받는 의존 욕구', faction: '삼사라', imgCode: 'Pri_.' },
-            { code: 'Z', name: '치즈루', title: '운명론자', rank: '종사/6급', appearance: '히메컷, 음양사복, 빈유(B)', sMask: '정해진 미래 강요, 냉혹', mCore: '자신의 예언을 빗나가게 만드는 변수에게 운명이 강간당하는 쾌감', faction: '음양료', imgCode: 'Chi_.' },
-            { code: 'k', name: '카게', title: '치즈루 광신도', rank: '정예/4급', appearance: '눈가림, 닌자복, 압박된(D)', sMask: '감정 없는 도구, 너를 배제', mCore: '치즈루의 벌을 받거나, 신의 뜻을 거스르는 너에게 제압당할 때의 혼란', faction: '음양료', imgCode: 'Kage_.' },
-            { code: 'M', name: '메이린', title: '사고뭉치 천재', rank: '정예/4급', appearance: '트윈테일, 도사복, 빈유(A)', sMask: '허세, 츤데레', mCore: '사고 칠 때마다 자신을 혼내고 바로잡아줄 오빠 같은 보호자 갈망', faction: '방선문', imgCode: 'Mei_.' },
-            { code: 'c', name: '청아', title: '감정 거세 계산기', rank: '달인/5급', appearance: '땋은 머리, 흰 도포, 빈유(A)', sMask: '완벽한 규율, 얼음', mCore: '계산할 수 없는 변수에 의해 논리가 붕괴되고 감정이 폭발하는 순간', faction: '방선문', imgCode: 'Cheong_.' },
+            { code: 'Z', name: '치즈루', title: '운명론자', rank: '종사/2등급', appearance: '히메컷, 음양사복, 빈유(B)', sMask: '정해진 미래 강요, 냉혹', mCore: '자신의 예언을 빗나가게 만드는 변수에게 운명이 강간당하는 쾌감', faction: '음양료', imgCode: 'Chi_.' },
+            { code: 'k', name: '카게', title: '치즈루 광신도', rank: '정예/4등급', appearance: '눈가림, 닌자복, 압박된(D)', sMask: '감정 없는 도구, 너를 배제', mCore: '치즈루의 벌을 받거나, 신의 뜻을 거스르는 너에게 제압당할 때의 혼란', faction: '음양료', imgCode: 'Kage_.' },
+            { code: 'M', name: '메이린', title: '사고뭉치 천재', rank: '정예/4등급', appearance: '트윈테일, 도사복, 빈유(A)', sMask: '허세, 츤데레', mCore: '사고 칠 때마다 자신을 혼내고 바로잡아줄 오빠 같은 보호자 갈망', faction: '방선문', imgCode: 'Mei_.' },
+            { code: 'c', name: '청아', title: '감정 거세 계산기', rank: '달인/3등급', appearance: '땋은 머리, 흰 도포, 빈유(A)', sMask: '완벽한 규율, 얼음', mCore: '계산할 수 없는 변수에 의해 논리가 붕괴되고 감정이 폭발하는 순간', faction: '방선문', imgCode: 'Cheong_.' },
             { code: 'w', name: '화월', title: '권태로운 독거미', rank: '정보상', appearance: '흐트러진 흑발, 시스루, 황금비율(D)', sMask: '모든 게 지루함, 남자를 가지고 놂', mCore: '예측 불가능한 너의 행동에서 삶의 자극과 떨림을 느낌', faction: '민간', imgCode: 'Hwawol_.' },
             { code: 'r', name: '시린', title: '겁쟁이 밀수꾼', rank: '상인', appearance: '갈색 펌, 페르시아복, 풍만(D)', sMask: '돈과 탐욕', mCore: '요괴의 공포 속에서 자신을 지켜주는 무력에게 맹목적으로 매달리고 종속됨', faction: '민간', imgCode: 'Shi_.' },
             { code: 'F', name: '겸', title: '미신의 노예', rank: '사냥꾼', appearance: '묶은 갈색 머리, 가죽옷, 실전형(B)', sMask: '과묵, 사냥 기술 자부', mCore: '인간의 기술을 초월한 자연재해급 힘에 대한 경외와 굴복', faction: '민간', imgCode: 'Gyeom_.' },
